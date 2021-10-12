@@ -1,0 +1,34 @@
+POST http://localhost:3000/graphql
+Content-Type: application/json
+Authorization: Bearer xxx
+X-REQUEST-TYPE: GraphQL
+
+{
+    categories{
+        label
+        posts {
+            category{
+                route
+                id
+            }
+        }
+    }
+}
+
+###
+
+POST http://localhost:3000/graphql
+Content-Type: application/json
+Authorization: Bearer xxx
+X-REQUEST-TYPE: GraphQL
+
+{
+    post(id : "17"){
+        title
+        category{
+            posts{
+                title
+            }
+        }
+    }
+}
